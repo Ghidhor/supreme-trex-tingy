@@ -7,7 +7,7 @@ var trex, trex_running, trex_collided,trex_doritoed;
 var ground, invisibleGround, groundImage;
 var youveBeenDoritoed,youveBeenDoritoedImg;
 var miniDoritoImg , miniDoritoGroup
-var manaBallGroup,manaballimage
+//var manaBallGroup,manaballimage
 var cloudsGroup, cloudImage;
 var obstaclesGroup, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6;
 var coinGroup,coin1 , doubleCoinGroup , coin2;
@@ -17,7 +17,7 @@ var jumpSound , checkPointSound, dieSound
 var badBirdGroup  , badBirdAnimation
 var SupahHotFiyah , fireyImage , shootEm , kaBoom , manapoints
 var hotSaucerGroup , hotSaucerImg
-var manaGroup , manaImage 
+//var manaGroup , manaImage 
 
 
 
@@ -28,7 +28,7 @@ function preload(){
   trex_collided = loadAnimation("trex_collided.png");
   badBirdAnimation = loadAnimation("BadBird1.png","BadBird1.3.png","BadBird1.8.png","BadBird2.png","BadBird1.8.png","BadBird1.3.png")
   groundImage = loadImage("ground2.png");
-  manaImage = loadImage("tseriessucksbutthismanadosent.png")
+  //manaImage = loadImage("tseriessucksbutthismanadosent.png")
   cloudImage = loadImage("cloud.png");
 
   obstacle1 = loadImage("obstacle1.png");
@@ -93,13 +93,13 @@ createCanvas(displayWidth,displayHeight);
   doubleCoinGroup = createGroup();
   hotSaucerGroup = createGroup();
   miniDoritoGroup = createGroup();
-  manaGroup = createGroup();
-  manaBallGroup = createGroup();
+  //manaGroup = createGroup();
+  //manaBallGroup = createGroup();
   trex.setCollider("circle",0,0,45);
   trex.debug = false
   obstaclesGroup.debug = true
   score = 0;
-  manapoints = 1000000
+  //manapoints = 1000000
   
 }
 
@@ -108,7 +108,7 @@ function draw() {
   background(0,200,255);
   //displaying score
   text("Score: "+ score, windowWidth - 100,windowHeight - 400);
-  text("Mana: "+ manapoints, windowWidth - 100,windowHeight - 200 );
+  //text("Mana: "+ manapoints, windowWidth - 100,windowHeight - 200 );
   
   if(gameState === PLAY){
 
@@ -118,7 +118,7 @@ function draw() {
     ground.velocityX = -(4 + 3* score/100)
     //scoring
     //score = score + Math.round(getFrameRate()/60);
-    manapoints = manapoints + getFrameRate()/600;
+    //manapoints = manapoints + getFrameRate()/600;
     if(trex.isTouching(coinGroup)){
       score = score+100
       coinGroup.destroyEach()
