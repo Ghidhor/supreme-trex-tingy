@@ -156,7 +156,7 @@ function draw() {
     spawnDoubleCoins();
     spawnHotSaucerGroup();
     miniDorito();
-    puremanashoot();
+   //puremanashoot();
     
     if(obstaclesGroup.isTouching(trex)||badBirdGroup.isTouching(trex)){
         //trex.velocityY = -12;
